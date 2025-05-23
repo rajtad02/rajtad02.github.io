@@ -1,0 +1,9 @@
+blog_name,project_name,blog_html,project_link,cs,oromo,hacking_tool,stats
+What is ARP and how can it be exploited?,ARP Cache Poisoning Tool,arp_blog,https://github.com/rajtad02/ARP-Cache-Poisoning-Tool,TRUE,FALSE,TRUE,FALSE
+Who are Oromia's neighbors?,The Neighborhood Series,neighborhood_blog,https://www.youtube.com/playlist?list=PLobsM7MOWfWHDttmbN-g_cQ14bXfTGybK,FALSE,TRUE,FALSE,FALSE
+What is an Interpreter? (and how I recreated on it in C),Scheme Interpreter,interpreter_blog,https://github.com/rajtad02/Scheme-Interpreter-refined-,TRUE,FALSE,FALSE,FALSE
+Using Shiny App in R!,Energy Graphic Application Techincal Report,shiny_blog,https://drive.google.com/file/d/1gLE1seCMPqyN2iM29P9hssiCXosr9wbf/view?usp=sharing,FALSE,FALSE,FALSE,TRUE
+My Experience with PyGame! (a python module),PyGame Games,pygame_blog,https://github.com/rajtad02/PyGame-Games,TRUE,FALSE,FALSE,FALSE
+Creating a Game with a Team using Sockets,ByteJack,bytejack_blog,https://github.com/Raccoonee/ByteJack_,TRUE,FALSE,FALSE,FALSE
+Creating a School Management System in Oromo,Gimbi App,gimbi_blog,not_ready.html,TRUE,TRUE,FALSE,TRUE
+Desiging my First Web Page!,EEB Website,eeb_blog,https://github.com/rajtad02/EEB-Website,TRUE,FALSE,FALSE,FALSE
