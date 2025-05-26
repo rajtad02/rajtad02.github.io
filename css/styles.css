@@ -1,17 +1,29 @@
 /* General Styles */
+html {
+    font-size: 16px;
+}
+
 body {
     background-color: black;
     color: #00ff00;
     font-family: "Courier New", Courier, monospace;
     margin: 0;
     padding: 0;
-    overflow: auto; /* Allow scrolling */
+    overflow: auto;
+    font-size: 1rem;
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: black;
     text-align: center;
-    padding: 20px;
-    border-bottom: 1px solid #00ff00;
+    padding: 1.25rem 0;
+    border-bottom: 0.0625rem solid #00ff00;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.2);
 }
 
 nav ul {
@@ -19,16 +31,17 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: flex-start; /* Align navigation bar to the left */
+    justify-content: flex-start;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 0.9375rem;
 }
 
 nav ul li a {
     color: #00ff00;
     text-decoration: none;
+    font-size: 1rem;
 }
 
 nav ul li a:hover {
@@ -36,17 +49,18 @@ nav ul li a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 1.25rem;
+    margin-top: 5rem;
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    border-top: 1px solid #00ff00;
+    padding: 1.25rem;
+    border-top: 0.0625rem solid #00ff00;
     font-size: 1em;
 }
 
@@ -62,29 +76,29 @@ footer {
 #copyright {
     color: #00ff00;
     font-family: "Courier New", Courier, monospace;
-    margin-top: 10px;
+    margin-top: 0.625rem;
     font-size: 0.9em;
 }
 
 /* Glitch Effect */
 @keyframes glitch {
     0% {
-        text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff;
+        text-shadow: 0.125rem 0.125rem 0 #ff0000, -0.125rem -0.125rem 0 #0000ff;
     }
     20% {
-        text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #0000ff;
+        text-shadow: -0.125rem -0.125rem 0 #ff0000, 0.125rem 0.125rem 0 #0000ff;
     }
     40% {
-        text-shadow: 2px -2px 0 #ff0000, -2px 2px 0 #0000ff;
+        text-shadow: 0.125rem -0.125rem 0 #ff0000, -0.125rem 0.125rem 0 #0000ff;
     }
     60% {
-        text-shadow: -2px 2px 0 #ff0000, 2px -2px 0 #0000ff;
+        text-shadow: -0.125rem 0.125rem 0 #ff0000, 0.125rem -0.125rem 0 #0000ff;
     }
     80% {
-        text-shadow: 2px 2px 0 #ff0000, -2px -2px 0 #0000ff;
+        text-shadow: 0.125rem 0.125rem 0 #ff0000, -0.125rem -0.125rem 0 #0000ff;
     }
     100% {
-        text-shadow: -2px -2px 0 #ff0000, 2px 2px 0 #0000ff;
+        text-shadow: -0.125rem -0.125rem 0 #ff0000, 0.125rem 0.125rem 0 #0000ff;
     }
 }
 
@@ -94,13 +108,13 @@ footer {
 
 /* Timeline Styles */
 #timeline {
-    margin-top: 40px;
-    padding: 20px;
+    margin-top: 2.5rem;
+    padding: 1.25rem;
     text-align: center;
 }
 
 #timeline h3 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: #00ff00;
     font-size: 1.5em;
 }
@@ -109,7 +123,7 @@ footer {
     position: relative;
     width: 80%;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 1.25rem 0;
 }
 
 .timeline-bar {
@@ -117,26 +131,26 @@ footer {
     left: 50%;
     top: 0;
     bottom: 0;
-    width: 4px;
+    width: 0.25rem;
     background-color: #00ff00;
     transform: translateX(-50%);
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
     width: 45%;
     clear: both;
 }
 
 .timeline-item.left {
     text-align: right;
-    padding-right: 20px;
+    padding-right: 1.25rem;
 }
 
 .timeline-item.right {
     text-align: left;
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 .timeline-job {
@@ -159,15 +173,15 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
-    gap: 10px;
+    margin: 1.25rem 0;
+    gap: 0.625rem;
 }
 
 #search-bar,
 #project-search-bar {
-    width: 300px;
-    padding: 10px;
-    border: 2px solid #00ff00;
+    width: 18.75rem;
+    padding: 0.625rem;
+    border: 0.125rem solid #00ff00;
     background-color: black;
     color: #00ff00;
     font-family: "Courier New", Courier, monospace;
@@ -181,8 +195,8 @@ footer {
 
 #filter-bar,
 #project-filter-bar {
-    padding: 10px;
-    border: 2px solid #00ff00;
+    padding: 0.625rem;
+    border: 0.125rem solid #00ff00;
     background-color: black;
     color: #00ff00;
     font-family: "Courier New", Courier, monospace;
@@ -191,7 +205,7 @@ footer {
 
 #blog-list,
 #project-list {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     text-align: center;
     color: #00ff00;
     font-family: "Courier New", Courier, monospace;
@@ -199,7 +213,7 @@ footer {
 
 .blog-item,
 .project-item {
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
 }
 
 .blog-item a,
