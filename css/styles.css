@@ -212,3 +212,25 @@ footer {
     color: #ff0000;
     text-decoration: underline;
 }
+
+/* Responsive styles for mobile */
+@media (max-width: 600px) {
+    #search-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+
+    #search-bar,
+    #project-search-bar,
+    #filter-bar,
+    #project-filter-bar {
+        width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    #footer-text {
+        display: none;
+    }
+}
