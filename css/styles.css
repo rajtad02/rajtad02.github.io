@@ -210,6 +210,13 @@ footer {
     text-decoration: underline;
 }
 
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
 @media (max-width: 600px) {
     #search-container {
         flex-direction: column;

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EEB Blog/Video</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>About Me</b></a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html"><b>Projects</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>Desiging my First Web Page!</h2>
+            <p>I created my first website alongsides Alejandro González and Aubrey Adams, two amazing programming partners! This is the first time I used tools like HTML, SQL (PSQL), and Flask intergrated with Python. It was a fun experience and instead of creating a vlog about it, I decided to share a video I made about it a while back. The website is no longer live, but this tutorial would show how it worked out. Also if you are interested in seeing the repository, <a href = https://github.com/rajtad02/EEB-Website>click here!</a></p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=7Q-opSXzF94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>If this video doesn't work, <a href = https://www.youtube.com/watch?v=7Q-opSXzF94>click here</a>, and you'll be redirected to the youtube video!</p>
+        </section>
+        <section id="search-section">
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search blogs..." />
+                <select id="filter-bar">
+                    <option value="all">All</option>
+                    <option value="cs">CS</option>
+                    <option value="oromo">Oromo</option>
+                    <option value="hacking_tool">Hacking Tools</option>
+                    <option value="stats">Stats</option>
+                </select>
+            </div>
+            <div id="blog-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-text"></div>
+        <p id="copyright">© Rajeera Geleta 2025</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
