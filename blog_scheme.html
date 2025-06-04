@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheme Interpreter's Blogs</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>About Me</b></a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html"><b>Projects</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>What is an Interpreter? (and how I made one in C)</h2>
+            <p>This blog correlates to <a href = https://github.com/rajtad02/Rajeeras-Scheme-Interpreter>my scheme interpreter</a>!</p>
+            <p>An interpreter is a program that directly executes instructions in a programming language WITHOUT compiling it into machine code first. Now a language that uses interpreters is called an interpreted language. You may already know quite a few of them: Python, JavaScript, Perl, etc. When I first started learning about interpreters during my sophomore year of College, we were first required to learn the interpreted language Scheme which is a dialect of the Lisp language family. This language was initially very challenging as it emphasized the use of recursion, so you had to start thinking recursively instead of using for or while loops. Over time that got easier, and I even started implementing recursions in my other classes, but that’s beside the point.</p>
+            <p>After we learned Scheme, we started learning about the fundamentals of interpreters. Since I did this project so long ago and since there are several components, I’ll just cover the parts I remember most: creating the tokenizer, parser, and “talloc.”</p>
+            <p>A tokenizer’s main purpose is to convert raw Scheme code into tokens. Tokens are individual units that result from tokenization. You can think of it like the words and punctuations in a sentence. For example, using English, if you put the sentence “I love pasta!” in a tokenizer, you would get the tokens “I”, “love”, “pasta”, and “!.” In a programming language tokens would look like keywords, variable/function names, operators, literals, and more. So for my computer scientists, here is an example in C:</p>
+            <p>int x = 5 + 2; // would produce the tokens …</p>
+            <p>int (keyword), x (variable), = (operator), 5 (literal), + (operator), 2 (literal), and ; (punctuation).</p>
+            <p>Now Scheme looks a bit different but here is an example:</p>
+            <p>(define (square x) (* x x))</p>
+            <p>This would be tokenized to (, define, (, square, x, ), (, *, x, x, ), and ).</p>
+            <p>Now why is tokenizing important? Other than the fact it’s the first step of interpreting, you need to break down the code into meaningful/logical parts. In the same way, we learn to understand the English language by learning vocab and parts of speech that we later combine to understand complex ideas, computers have to do the same thing. This becomes very important when we move on to the next part of the interpreter “parsing.”</p>
+            <p>So, the next logical question is … “what is parsing?” Parsing is analyzing tokens, produced by the tokenizer, to understand their meaning according to the grammar. Grammar is a set of formal rules that defines the syntax of a programming language. For example …</p>
+            <p>// A.</p>
+            <p>int y = 2 * (3 + 4);</p>
+            <p>If you know the rules (grammar) of C, this obviously makes sense. Now how about this…</p>
+            <p>// B.</p>
+            <p>int y = * (3+ 4);</p>
+            <p>This, if you know C, obviously doesn’t work. That is because the operator “*” lacks an operand (a defined variable or literal) to its left.</p>
+            <p>Now during the tokenization phase, all the tokenizer does is break up apart the code into meaningful parts. It wouldn’t catch the grammar being broken: so examples A and B will pass through with flying colors. What the parser does after tokenizing, however, is check for a syntax error like we saw in example B. If there are no grammar-related issues, then the interpreter continues.</p>
+            <p>Now, the last thing I’ll explain is what talloc is. Talloc is a custom memory manager we were required to create for our Scheme interpreter. For those of you who haven’t programmed in C or its derived languages, you have a lot of control over your memory, which sounds great at first till you realize how much more work that involves. When we learned about managing our memory and putting that into practice, I remember how much I first disliked C for that. In fact, going off on a tangent, this made C feel like the “final boss” in computer programming. We first started with Python, where everything was handled for you. You don’t have to even worry about declaring. Then we moved up to Java, which was a bit more challenging, but aesthetically pleasing, as everything looks much more organized. Then comes C, where it feels like everything you do is wrong. You have to learn about how memory works, and then you jump right in with pointers, which took me a while to understand. Anyway, back to talloc. Because of how challenging memory management is in C, talloc is created to automate that memory management for us. Now I don’t want to get too technical, because if you are really interested in seeing how talloc works, just feel free to visit my GitHub repo. For everyone else, however, there is a cool cooking analogy that I found that explains talloc a bit simpler. If you aren’t using talloc, it’s like immediately washing each dish/utensil you are using to cook right after you are done with it. This is because you have to micromanage all the memory on your own, and you can imagine that gets more and more complex as the complexity of the program grows. Now, if you used talloc to cook, that’s like washing all the dishes at the end and at the same time using a dishwasher. You can see how much easier that makes things.</p>
+            <p>Now, these are just a few components of making an interpreter in C. It is much more complex but worth learning as you get better at understanding how to allocate memory and how programming languages are structured. In fact, after taking this course, I’ve noticed I’m much better at debugging than I was before. I’m also really good at programming in C. I had a great time, I would definitely take the class again if I could, but I just wanted to share my experience creating an interpreter and learning C. Thanks for reading!</p>
+        </section>
+        <section id="search-section">
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search blogs..." />
+                <select id="filter-bar">
+                    <option value="all">All</option>
+                    <option value="cs">CS</option>
+                    <option value="oromo">Oromo</option>
+                    <option value="hacking_tool">Hacking Tools</option>
+                    <option value="stats">Stats</option>
+                </select>
+            </div>
+            <div id="blog-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-text"></div>
+        <p id="copyright">© Rajeera Geleta 2025</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
