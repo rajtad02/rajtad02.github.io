@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const blogList = document.getElementById("blog-list");
 
     if (searchBar && filterBar && blogList) {
-        fetch('data/BlogProjectDatabase.csv')
+        fetch('data/BlogDatabase.csv')
             .then(response => response.text())
             .then(csvText => {
                 const rows = csvText.trim().split('\n').slice(1); // Skip the header row
@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const projectList = document.getElementById("project-list");
 
     if (projectSearchBar && projectFilterBar && projectList) {
-        fetch('data/BlogProjectDatabase.csv')
+        fetch('data/ProjectDatabase.csv')
             .then(response => response.text())
             .then(csvText => {
                 const rows = csvText.trim().split('\n').slice(1); // Skip the header row

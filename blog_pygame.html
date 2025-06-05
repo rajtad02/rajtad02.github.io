@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Python/Pygame</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>About Me</b></a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html"><b>Projects</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>My Experience Teaching Python and its Pygame Module!</h2>
+            <p>This blog correlates to the my <a href = https://github.com/rajtad02/PyGame-Games>GitHub Pygame repostiroy</a>.</p>
+            <p>During the summer after my freshman year at College, I got a teaching job with AiGoLearning to teach kids how to code in Python. For the more advanced children, however, I was tasked with teaching them how to code using the Pygame module in Python. Now I already had experience programming in Python as I took my first ever computer science class in my second term ever at Carleton, but I had no idea what Pygame was. So I had to give myself a crash course in a matter of days before I started teaching the class.</p>
+            <p>For those of you who don’t know, Pygame is a module in Python that is primarily used to write video games and simulations. It uses the Simple Direct Media Layer (SDL) library, which is just a library that's used to create graphics. The issue however was that SDL was originally written in C, which is a low-level language that is hard for beginner programmers to grasp, especially children. So Pygame just wrapped the library and made it high-level. To do this, however, the programmer has less control over his game than someone who uses SDL directly because to make it high-level, you have to cut out the tedious parts. This is why people complain that Pygame is too slow. It’s like writing a bike with training wheels. It’s easier to learn how to ride a bike with training wheels, but your speed at some point is highly limited. There are ways to get better performances from games you write with Pygame, but if you are serious about game development, I would recommend learning C++ instead of using Python.</p>
+            <p>Anyway, back to my experiences: teaching kids how to program was pretty fun! AiGoLearning already had lesson plans created for teachers, but I had the freedom to create my own lesson plans (as long as it included what was expected). I fully took advantage of that freedom to create my own lesson plans to teach my students in a way I felt was more intuitive. This is actually how I got hired in the first place because, in my mock class, they found the angle that I was teaching from to be very easy to follow. And it showed with my students as they never fell behind and were excited to come back to class. To the students I taught Pygames too specifically: we made about 3 games together: a Pacman time trial, pong, and a platform Mario knock-off. Now I haven’t been able to find all of the games, except for the Pacman time trial, but when I do, I’ll add it to the repository linked above!</p>
+            <p>Other than teaching students, I was also responsible for meeting up with their parents and giving them updates about their students' performances. This was pretty easy as my students caught up with their work. The biggest issue I would deal with when teaching kids is them zoning out. This wasn't shocking to me, because they are literally sitting right in front of a computer that we are making games on. This never really upset me because I would probably do the same thing they were doing if I were their age and because they were playing around with their code. So even if they missed something I said here and there, they are learning something by playing around with it. By tolerating this, I was also fostering their curiosity, making them more interested in the classes, which in turn made them better learners.</p>
+            <p>Overall, I had a great time and gained a lot of experience. I used this experience when it came to tutoring local middle school students through my college’s Tutoring Hotline Program and when it came to my Hawwisoo’s cultural workshops, where I taught Oromo dance and songs. This even motivated me to partake in my professor's research into testing different educational assessments using machine learning. Lastly, this job in a way got me to relate to teachers more. There are a lot of things that teachers do that don’t get recognized and that they aren’t compensated for properly. Teaching a kid, unlike a university student, is completely different. You can’t just lecture and wish them the best. You have to constantly monitor them, see their facial expressions, check up on them to see if they are following along, and much more. Also, you don’t get compensated for going above and beyond. Making those lessons ahead of the class took several hours. Prewriting code, creating questions, and explaining something from a creative and intuitive angle, are often not recognized or appreciated. And I’m not putting the blame on AiGoLearning: they already provided me with lessons. It rather reminds me of all the teachers I had growing up who went above and beyond to connect with me and to teach me and I feel like there was more appreciation that was due to them than what was given. Once again, this was an incredible and insightful experience that I will always cherish. I had a fun time teaching my students, and I would recommend a job like this to anyone: it only grows you as a person.</p>
+        </section>
+        <section id="search-section">
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search blogs..." />
+                <select id="filter-bar">
+                    <option value="all">All</option>
+                    <option value="cs">CS</option>
+                    <option value="oromo">Oromo</option>
+                    <option value="hacking_tool">Hacking Tools</option>
+                    <option value="stats">Stats</option>
+                </select>
+            </div>
+            <div id="blog-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-text"></div>
+        <p id="copyright">© Rajeera Geleta 2025</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
