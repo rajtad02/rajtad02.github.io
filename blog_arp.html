@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARP Spoofing</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>About Me</b></a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html"><b>Projects</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>What is ARP and how can it be exploited?</h2>
+            <p>This blog correlates to <a href = https://github.com/rajtad02/ARP-Cache-Poisoning-Tool>my ARP spoofing tool</a>!</p>
+            <p>During my final year at Carleton College, I took a capstone course in Hacking Tools and was tasked with creating one with a partner. So, my friend, Yeabsira Gebreegziabher, and I decided to create an ARP Cache Poisoning (also known as ARP Spoofing) tool to facilitate a man-in-the-middle (MITM) attack. We were inspired to pursue this tool after using the Ettercap tool on Kali Linux. This ended up becoming our capstone project followed by an oral examination on what we learned, which was a great experience for both of us.</p>
+            <p>Firstly, before I get into this project let me explain what ARP and spoofing are. ARP stands for Address Resolution Protocol: a networking protocol that dynamically assigns machines on a network to an IP address. If you don't know what an IP address is, it's used to find machines on networks (like the internet), just like how your home address is used to find where you are. What makes this dynamic though? Your IP address changes. Just like your physical address doesn't always point to you, your IP doesn't either. The reason for this is that your home network has a limited amount of IP addresses (e.g. 192.0.2.x, with x representing 1-255) to share with all the devices on your network. Imagine if every single person who used your home Wi-Fi kept their IP address. You would run out of possible IPs to assign new people after the 254th person. So ARP is an important protocol because it keeps your home network functional and assigns every device an address that is reachable to other devices on the internet. This is especially important to those of us who consume online media.</p>
+            <p>Now what makes this protocol vulnerable is the associated ARP cache (also known as ARP table). The ARP cache is a part of the memory that every device that connects to the network has. To understand what an ARP cache is, you first need to understand what a MAC address is. A MAC address is an address that every device has that, unlike an IP address, does not change. If we think of an IP address like a home address, a MAC address is like your identification (license, SSN, etc.). Your MAC address proves that it is your machine that is doing whatever because no matter what network you are on, your MAC address stays the same. Now the purpose of an ARP cache/table is to assign every MAC address on a network to an IP address. It fills up this table using the ARP packets. There are two kinds of packets specifically: 1. ARP request packets and 2. ARP reply packets. ARP request packets ask the whole network: "Hey! Which machine is associated with the IP address y?" The way an ARP reply packet works is by replying to this request packet by saying: "I, with MAC address x, is associated with IP address y." Then the requesting machine updates its ARP table with the MAC address that claimed it.</p>
+            <p>Before we continue, I just want to emphasize the purpose of a MAC and IP address. A MAC address is used on a local network to send information to a physical device. An IP address is used on a broader network, like the internet, to find what gateway (like your router) to send your information to. Once the information gets to the hands of your router, your router uses your MAC address to physically send the information. So, long story short, on the internet, you're identified by your IP address, on your local network, you're identified by your MAC address.</p>
+            <p>Now what makes this protocol dangerous is the fact that machines take unsolicited ARP reply packets. This means that a machine will update its ARP cache whenever someone sends it an ARP reply packet (it doesn't need to send an ARP request packet first). Now if you are a programmer, you can craft packets with fake information in order to impersonate another machine on the local network.  This is where ARP cache poisoning comes in. The goal of this 2-way MITM attack is to get between the communication of two devices on a network. We accomplish that by sending out two ARP reply packets to two machines on your network: the victim's computer and the gateway (typically your router). To the victim's computer, you send an ARP reply packet saying that the IP address associated with the gateway has my MAC address. To the gateway, you send an ARP reply packet saying that the IP address associated with the victim's computer is actually associated with your MAC address. So if you were to ARP spoof someone, you would get all the packets they are trying to send to the internet and all the packets that are coming back to them from the internet.</p>
+            <p>The goal here isn't to keep the packets, you want to keep the information flowing so that your presence isn't detected. What you can do though, is analyze these packets. So using a tool that captures packets would really be helpful so that you can see everything. Before encryption became such a standard, you could literally see everything someone was doing. You would be able to see their login credentials, what kind of media they are consuming, what kind of information they are searching for, what kind of websites they are visiting, etc. and you would have also been able to mess around with their packets if you wanted to. Not all of this is lost due to encryption: you can still see what kind of websites someone is visiting if you use this kind of tool, but the possibilities are endless.</p>
+            <p>Now this tool only works if the attacker is on the same local network, so you might be relieved to hear that, but don't. If someone wanted to do something malicious to you, they aren't stopping there. There are a lot of hypothetical ways we could use this kind of attack to exploit someone. One way we could do that is by compromising someone's computer on your local network, and then doing an ARP spoof from that machine to you and see everything you are doing. The potential is really endless as long as you stay creative and that is what made learning about this topic and working on this project did for me. It introduced me to the world of cyber security.</p>
+            <p>When it came to actually creating the program, me and my partner had an easy time. We've both been programming for at least 3 years at this point so that wasn't too hard. It was just understanding the concept for me that came with its own challenges. Creating this tool and learning about ARP spoofing was so fun, that I plan to continue studying and replicating other hacking tools. If you have any questions about my experience or want to learn more about this hacking tool, feel free to contact me through email: rajtad02@gmail.com or feel free to watch the video below! As always, thanks for coming by.</p>
+            <p>Now, these are just a few components of making an interpreter in C. It is much more complex but worth learning as you get better at understanding how to allocate memory and how programming languages are structured. In fact, after taking this course, I’ve noticed I’m much better at debugging than I was before. I’m also really good at programming in C. I had a great time, I would definitely take the class again if I could, but I just wanted to share my experience creating an interpreter and learning C. Thanks for reading!</p>
+        </section>
+        <section id="search-section">
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search blogs..." />
+                <select id="filter-bar">
+                    <option value="all">All</option>
+                    <option value="cs">CS</option>
+                    <option value="oromo">Oromo</option>
+                    <option value="hacking_tool">Hacking Tools</option>
+                    <option value="stats">Stats</option>
+                </select>
+            </div>
+            <div id="blog-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-text"></div>
+        <p id="copyright">© Rajeera Geleta 2025</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
