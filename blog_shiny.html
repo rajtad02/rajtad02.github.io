@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult/App Blog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><b>About Me</b></a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="projects.html"><b>Projects</b></a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="projects">
+            <h2>Statistical Consulting & Creating an App!</h2>
+            <p>This blog correlates to the <a href = https://drive.google.com/file/d/1gLE1seCMPqyN2iM29P9hssiCXosr9wbf/view>this redacted report.</a></p>
+            <p>As mentioned on my about me page, I’m a data science and statistics minor. At one point, I committed to majoring in Statistics altogether, but I discovered cybersecurity and made the switch back to computer science. But that wasn’t before my junior year class: Statistical Consulting. This class introduced me to statistical consulting by splitting people into teams where they worked with a local partner in Northfield and did free consulting. I was paired with only one other student and we worked with a local institution (for their privacy I’ll refer to them as Institution A) to provide them with enough information about their energy consumption for them to make an educated decision about how they should continue investing into clean renewable energy for their place of work.</p>
+            <p>To do this, we decided to create a shiny app in R, so that our clients could present this data visually to the rest of their board and their institution. This is where I shined in the class as I created a multitude of interactive visuals based on what our clients wanted. Since I have a lot of experience in programming and making data visuals, creating interactive visuals with the shiny app was pretty fun. My partner, an economics major, focused more on managing all the energy consumption data since we had, I believe, over a decade of data to go through.</p>
+            <p>This was a pretty incredible experience. I had a lot of fun and I hope that in the future, I may be in a position where I work with a client directly to provide them with the services they need. This project specifically took multiple groups to get through, but with how efficient my partner and I were, we made a lot of progress for them and they were really happy with the results. This is kind of ironic since neither of us are statistics major, but we both already had experience in our respective fields. I'm already experienced with making applications and my partner was heavily experienced with managing our spreadsheet. We also had great communication: I helped out when he needed me and he did the same for me. We also got along with our clients really well, so overall it was a great experience.</p>
+            <p>Now normally in these blogs, I link you guys to the application I created, but unfortunately in this case, I don't own it, so I can't share it. But! I created a report with all of our client's information redacted, so you are able to see what we created and what our analysis was. There are also some graphics of the app, so feel free to check it out (the link is at the top of this blog). I'll see you all next time!</p>
+        </section>
+        <section id="search-section">
+            <div id="search-container">
+                <input type="text" id="search-bar" placeholder="Search blogs..." />
+                <select id="filter-bar">
+                    <option value="all">All</option>
+                    <option value="cs">CS</option>
+                    <option value="oromo">Oromo</option>
+                    <option value="hacking_tool">Hacking Tools</option>
+                    <option value="stats">Stats</option>
+                </select>
+            </div>
+            <div id="blog-list"></div>
+        </section>
+    </main>
+    <footer>
+        <div id="footer-text"></div>
+        <p id="copyright">© Rajeera Geleta 2025</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
