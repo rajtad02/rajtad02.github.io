@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scheme Interpreter</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="index.html"><b>About Me</b></a></li>
-                <li><a href="blogs.html">Blogs</a></li>
-                <li><a href="projects.html"><b>Projects</b></a></li>
-                <li><a href="contact.html"><b>Contact</b></a></li>
+                <li><a href="../index.html"><b>About Me</b></a></li>
+                <li><a href="../blogs.html">Blogs</a></li>
+                <li><a href="../projects.html"><b>Projects</b></a></li>
+                <li><a href="../contact.html"><b>Contact</b></a></li>
             </ul>
         </nav>
     </header>
@@ -41,24 +41,11 @@
             <p>Now, the last thing I’ll explain is what talloc is. Talloc is a custom memory manager we were required to create for our Scheme interpreter. For those of you who haven’t programmed in C or its derived languages, you have a lot of control over your memory, which sounds great at first till you realize how much more work that involves. When we learned about managing our memory and putting that into practice, I remember how much I first disliked C for that. In fact, going off on a tangent, this made C feel like the “final boss” in computer programming. We first started with Python, where everything was handled for you. You don’t have to even worry about declaring. Then we moved up to Java, which was a bit more challenging, but aesthetically pleasing, as everything looks much more organized. Then comes C, where it feels like everything you do is wrong. You have to learn about how memory works, and then you jump right in with pointers, which took me a while to understand. Anyway, back to talloc. Because of how challenging memory management is in C, talloc is created to automate that memory management for us. Now I don’t want to get too technical, because if you are really interested in seeing how talloc works, just feel free to visit my GitHub repo. For everyone else, however, there is a cool cooking analogy that I found that explains talloc a bit simpler. If you aren’t using talloc, it’s like immediately washing each dish/utensil you are using to cook right after you are done with it. This is because you have to micromanage all the memory on your own, and you can imagine that gets more and more complex as the complexity of the program grows. Now, if you used talloc to cook, that’s like washing all the dishes at the end and at the same time using a dishwasher. You can see how much easier that makes things.</p>
             <p>Now, these are just a few components of making an interpreter in C. It is much more complex but worth learning as you get better at understanding how to allocate memory and how programming languages are structured. In fact, after taking this course, I’ve noticed I’m much better at debugging than I was before. I’m also really good at programming in C. I had a great time, I would definitely take the class again if I could, but I just wanted to share my experience creating an interpreter and learning C. Thanks for reading!</p>
         </section>
-        <section id="search-section">
-            <div id="search-container">
-                <input type="text" id="search-bar" placeholder="Search blogs..." />
-                <select id="filter-bar">
-                    <option value="all">All</option>
-                    <option value="cs">CS</option>
-                    <option value="oromo">Oromo</option>
-                    <option value="hacking_tool">Hacking Tools</option>
-                    <option value="stats">Stats</option>
-                </select>
-            </div>
-            <div id="blog-list"></div>
-        </section>
     </main>
     <footer>
         <div id="footer-text"></div>
         <p id="copyright">© Rajeera Geleta 2025</p>
     </footer>
-    <script src="js/scripts.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

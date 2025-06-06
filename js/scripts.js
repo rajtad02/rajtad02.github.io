@@ -115,12 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(csvText => {
                 const rows = csvText.trim().split('\n').slice(1); // Skip the header row
                 const blogs = rows.map(row => {
-                    const [blog_name, project_name, blog_html, project_link, cs, oromo, hacking_tool, stats] = row.split(',');
+                    const [blog_name, blog_html, cs, oromo, hacking_tool, stats] = row.split(',');
                     return {
                         blog_name: blog_name.trim(),
-                        project_name: project_name.trim(),
                         blog_html: blog_html.trim(),
-                        project_link: project_link.trim(),
                         categories: {
                             cs: cs.trim() === "TRUE",
                             oromo: oromo.trim() === "TRUE",
@@ -160,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 searchBar.addEventListener("input", filterBlogs);
                 filterBar.addEventListener("change", filterBlogs);
             })
-            .catch(error => console.error('Error loading BlogProjectDatabase.csv:', error));
+            .catch(error => console.error('Error loading BlogDatabase.csv:', error));
     }
     const projectSearchBar = document.getElementById("project-search-bar");
     const projectFilterBar = document.getElementById("project-filter-bar");
@@ -172,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(csvText => {
                 const rows = csvText.trim().split('\n').slice(1); // Skip the header row
                 const projects = rows.map(row => {
-                    const [blog_name, project_name, blog_html, project_link, cs, oromo, hacking_tool, stats] = row.split(',');
+                    const [project_name, project_link, cs, oromo, hacking_tool, stats] = row.split(',');
                     return {
                         project_name: project_name.trim(),
                         project_link: project_link.trim(),
@@ -215,6 +213,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 projectSearchBar.addEventListener("input", filterProjects);
                 projectFilterBar.addEventListener("change", filterProjects);
             })
-            .catch(error => console.error('Error loading BlogProjectDatabase.csv:', error));
+            .catch(error => console.error('Error loading ProjectDatabase.csv:', error));
     }
 });
