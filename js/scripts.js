@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Typing effect for the header (index.html only)
     const header = document.getElementById("dynamic-header");
     if (header) {
-        const textBank = ["Rajeera Geleta!", "a Computer Scientist!", "an Aspiring Cybersecurity Specialist!", "an Oromo Community Leader!"];
+        const textBank = ["Rajeera Geleta!", "a Computer Scientist!", "an Aspiring Cybersecurity Specialist!", "an Aspiring Data Analyst!", "an Oromo Community Leader!"];
         let textIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
